@@ -1,7 +1,7 @@
 # In the future, this will be updated to download video/audio from any client
 import yt_dlp
 
-def download_youtube_video_as_mp3(youtube_url, output_folder="./scriptDownloads/audio"):
+def download_youtube_video_as_mp3(youtube_url, output_folder=r"C:\Users\User\Music\Downloads"):
     ydl_opts = {
         'format': 'bestaudio/best',
         'outtmpl': f'{output_folder}/%(title)s.%(ext)s',
@@ -19,7 +19,7 @@ def download_youtube_video_as_mp3(youtube_url, output_folder="./scriptDownloads/
     except Exception as e:
         print(f"An error occurred: {e}")
 
-def download_video(url, output_path="./scriptDownloads/vids"):
+def download_video(url, output_path=r"C:\Users\User\Videos\Downloads"):
     ydl_opts = {
         'format': 'best',
         'outtmpl': f'{output_path}/%(title)s.%(ext)s',
