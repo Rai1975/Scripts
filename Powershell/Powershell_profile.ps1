@@ -5,15 +5,20 @@ function llama{
 	ollama run llama3.2:3b
 }
 
+function gut{
+	Write-Host "xD LEARN HOW TO SPELL" -ForegroundColor Green
+	git status
+}
+
 function synclist {
     # Start the Flask app in a background job
 	Write-Host "Running Script..."
-    $flaskJob = Start-Job -ScriptBlock {
+    	$flaskJob = Start-Job -ScriptBlock {
 	cd "c:\Users\User\projects\Canvas2DoIst"
         python app.py
     }
 
-    Start-Sleep -Seconds 1
+    Start-Sleep -Seconds 3
 
 	Write-Host "Accessing Assignments..."
     $response = Invoke-WebRequest -Uri "http://127.0.0.1:5000/sync-assignments" -UseBasicP
@@ -28,7 +33,7 @@ function synclist {
 
 
 function ytmp3 {
-	python -u "C:\Users\User\projects\Scripts\Python\ytDownload.py"
+	python -u "C:\Users\User\projects\Scripts\Python\video_download.py"
 	explorer "C:\Users\User\Videos\Downloads"
 }
 

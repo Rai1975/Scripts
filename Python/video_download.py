@@ -1,7 +1,7 @@
 # In the future, this will be updated to download video/audio from any client
 import yt_dlp
 
-def download_youtube_video_as_mp3(youtube_url, output_folder=r"C:\Users\User\Music\Downloads"):
+def download_youtube_video_as_mp3(url, output_folder=r"C:\Users\User\Music\Downloads"):
     ydl_opts = {
         'format': 'bestaudio/best',
         'outtmpl': f'{output_folder}/%(title)s.%(ext)s',
@@ -14,7 +14,7 @@ def download_youtube_video_as_mp3(youtube_url, output_folder=r"C:\Users\User\Mus
 
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-            ydl.download([youtube_url])
+            ydl.download([url])
         print("Download and conversion to MP3 complete!")
     except Exception as e:
         print(f"An error occurred: {e}")
@@ -28,12 +28,13 @@ def download_video(url, output_path=r"C:\Users\User\Videos\Downloads"):
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         ydl.download([url])
 
-youtube_url = input("Enter the YouTube video URL: ")
+# It can download any url!!
+url = input("Enter the video URL: ")
 choice = int(input("MP3 / MP4 (0/1): "))
 
 if choice == 0:
-    download_youtube_video_as_mp3(youtube_url)
+    download_youtube_video_as_mp3(url)
 elif choice == 1:
-    download_video(youtube_url)
+    download_video(url)
 else:
     print("Invalid choice.")
