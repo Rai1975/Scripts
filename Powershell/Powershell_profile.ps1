@@ -71,3 +71,7 @@ function adcs {
 	cd C:\Users\User\projects\PyMACS
 	code .
 }
+
+function wiggle {
+	python -u 'C:\Users\User\projects\Scripts\Python\mouse_wiggler.py'
+}
