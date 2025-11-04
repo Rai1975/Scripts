@@ -1,4 +1,5 @@
 import sys
+import pyperclip
 
 def read_file():
     lines = []
@@ -27,14 +28,14 @@ def write_to_file(lines):
 if __name__=="__main__":
     lines = read_file()
 
-    x = sys.argv[1:]
-    print(x)
-
     company_name = sys.argv[1]
     position_title = sys.argv[2]
 
     new_lines = replace_titles(company_name, position_title, lines)
-
     write_to_file(new_lines)
 
+    with open(r'C:\Users\User\projects\Scripts\Python\files\cover_letter_output.txt', 'r+') as f:
+        lines = f.read()
+
+    pyperclip.copy(lines)
     print("Done!")
