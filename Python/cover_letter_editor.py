@@ -1,3 +1,5 @@
+import sys
+
 def read_file():
     lines = []
     with open(r'C:\Users\User\projects\Scripts\Python\files\cover_letter_input.txt', 'r+') as f:
@@ -11,7 +13,7 @@ def replace_titles(company_name, position_title, lines):
     for line in lines:
         new_line = line
         new_line = line.replace('COMPANY_NAME', company_name)
-        new_line = line.replace('POSITION_NAME', position_title)
+        new_line = new_line.replace('POSITION_NAME', position_title)
 
         new_lines.append(new_line)
 
@@ -25,7 +27,16 @@ def write_to_file(lines):
 if __name__=="__main__":
     lines = read_file()
 
-    new_lines = replace_titles('Idaho National Lab', 'Soft Engineer', lines)
+    x = sys.argv[1:]
+    print(x)
 
-    write_to_file(new_lines)
+    print(x.split('/'))
 
+    company_name = sys.argv[1]
+    position_title = sys.argv[2]
+
+    # new_lines = replace_titles(company_name, position_title, lines)
+
+    # write_to_file(new_lines)
+
+    # print("Done!")
