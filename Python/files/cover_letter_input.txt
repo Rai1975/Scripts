@@ -142,7 +142,7 @@
 \fontfamily{phv}\selectfont
 \userInfo{318 Warner St, Cincinnati OH}{USA}{(513) 580-9384}{rafeekrn@mail.uc.edu}
 \companyInfo{COMPANY_NAME}{}{}{}
-\object{POSITION_NAME}
+\object{Interest in POSITION_NAME Position}
 \content{
   Dear Recruiter, \\
   
