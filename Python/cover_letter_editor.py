@@ -30,13 +30,11 @@ if __name__=="__main__":
     x = sys.argv[1:]
     print(x)
 
-    print(x.split('/'))
-
     company_name = sys.argv[1]
     position_title = sys.argv[2]
 
-    # new_lines = replace_titles(company_name, position_title, lines)
+    new_lines = replace_titles(company_name, position_title, lines)
 
-    # write_to_file(new_lines)
+    write_to_file(new_lines)
 
-    # print("Done!")
+    print("Done!")
